@@ -1,0 +1,35 @@
+pipeline {
+    agent any
+    stages {
+        stage('Setup') {
+            steps {
+                sh 'pip install selenium playwright splinter behave robotframework'
+            }
+        }
+        stage('Selenium Tests') {
+            steps {
+                sh 'pytest tests/selenium_tests'
+            }
+        }
+        stage('Playwright Tests') {
+            steps {
+                sh 'pytest tests/playwright_tests'
+            }
+        }
+        stage('Splinter Tests') {
+            steps {
+                sh 'python tests/splinter_tests.py'
+            }
+        }
+        stage('Behave Tests') {
+            steps {
+                sh 'behave tests/behave_tests'
+            }
+        }
+        stage('Robot Framework Tests') {
+            steps {
+                sh 'robot tests/robot_tests'
+            }
+        }
+    }
+}

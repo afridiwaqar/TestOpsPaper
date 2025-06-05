@@ -1,0 +1,33 @@
+version: 2.1
+
+jobs:
+  test:
+    docker:
+      - image: circleci/python:3.8
+    steps:
+      - checkout
+      - run:
+          name: Install dependencies
+          command: |
+            pip install selenium playwright splinter behave robotframework
+      - run:
+          name: Run Selenium Tests
+          command: pytest tests/selenium_tests
+      - run:
+          name: Run Playwright Tests
+          command: pytest tests/playwright_tests
+      - run:
+          name: Run Splinter Tests
+          command: python tests/splinter_tests.py
+      - run:
+          name: Run Behave Tests
+          command: behave tests/behave_tests
+      - run:
+          name: Run Robot Framework Tests
+          command: robot tests/robot_tests
+
+workflows:
+  version: 2
+  test:
+    jobs:
+      - test

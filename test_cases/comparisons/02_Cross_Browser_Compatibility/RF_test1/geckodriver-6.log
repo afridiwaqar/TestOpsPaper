@@ -1,0 +1,21 @@
+1718983016974	geckodriver	INFO	Listening on 127.0.0.1:52987
+1718983017006	mozrunner::runner	INFO	Running command: MOZ_CRASHREPORTER="1" MOZ_CRASHREPORTER_NO_REPORT="1" MOZ_CRASHREPORTER_SHUTDOWN="1" MOZ_NO_REMOTE="1" "/usr ... te" "--remote-debugging-port" "56593" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofileQWjdi7"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1718983017483	Marionette	INFO	Marionette enabled
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1718983017579	Marionette	INFO	Listening on port 45393
+WebDriver BiDi listening on ws://127.0.0.1:56593
+Read port: 45393
+1718983017881	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.error: ({})
+DevTools listening on ws://127.0.0.1:56593/devtools/browser/9334a438-393a-4065-afb7-6c8e9f0bdb59
+JavaScript warning: http://127.0.0.1:5000/static/js/jquery.min.js, line 4: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+console.warn: LoginRecipes: "Falling back to a synchronous message for: http://127.0.0.1:5000."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: http://127.0.0.1:5000."
+console.error: (new TypeError("linkMap is undefined", "resource://gre/modules/NewTabUtils.sys.mjs", 2003))
+JavaScript warning: http://127.0.0.1:5000/static/js/jquery.min.js, line 4: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+1718983020203	Marionette	INFO	Stopped listening on port 45393
+console.error: (new TypeError("NetworkError: Network request failed", "resource://services-settings/Utils.sys.mjs", 236))
+console.error: (new TypeError("NetworkError: Network request failed", "resource://services-settings/Utils.sys.mjs", 236))

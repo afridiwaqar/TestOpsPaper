@@ -1,0 +1,26 @@
+1718982626131	geckodriver	INFO	Listening on 127.0.0.1:34163
+1718982626144	mozrunner::runner	INFO	Running command: MOZ_CRASHREPORTER="1" MOZ_CRASHREPORTER_NO_REPORT="1" MOZ_CRASHREPORTER_SHUTDOWN="1" MOZ_NO_REMOTE="1" "/usr ... te" "--remote-debugging-port" "38907" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofilemZWzNQ"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1718982626712	Marionette	INFO	Marionette enabled
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1718982626819	Marionette	INFO	Listening on port 34579
+WebDriver BiDi listening on ws://127.0.0.1:38907
+Read port: 34579
+1718982627051	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.error: ({})
+DevTools listening on ws://127.0.0.1:38907/devtools/browser/bc6031c4-935e-4b26-810b-1946f2f64e58
+console.error: (new TypeError("linkMap is undefined", "resource://gre/modules/NewTabUtils.sys.mjs", 2003))
+JavaScript warning: http://127.0.0.1:5000/static/js/jquery.min.js, line 4: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+console.warn: LoginRecipes: "Falling back to a synchronous message for: http://127.0.0.1:5000."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: http://127.0.0.1:5000."
+JavaScript warning: http://127.0.0.1:5000/static/js/jquery.min.js, line 4: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+1718982629876	Marionette	INFO	Stopped listening on port 34579
+console.error: services.settings: 
+  main/fingerprinting-protection-overrides Signature failed  TypeError: NetworkError: Network request failed
+console.error: services.settings: 
+  main/query-stripping Signature failed  TypeError: NetworkError: Network request failed
+!!! error running onStopped callback: TypeError: callback is not a function
+console.error: (new NetworkError("Network error: TypeError: NetworkError: Network request failed", "resource://services-settings/RemoteSettingsClient.sys.mjs", 107))
+console.error: (new NetworkError("Network error: TypeError: NetworkError: Network request failed", "resource://services-settings/RemoteSettingsClient.sys.mjs", 107))

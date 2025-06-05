@@ -1,0 +1,27 @@
+name: CI
+
+on: [push, pull_request]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.8
+    - name: Install dependencies
+      run: |
+        pip install selenium playwright splinter behave robotframework
+    - name: Run Selenium Tests
+      run: pytest tests/selenium_tests
+    - name: Run Playwright Tests
+      run: pytest tests/playwright_tests
+    - name: Run Splinter Tests
+      run: python tests/splinter_tests.py
+    - name: Run Behave Tests
+      run: behave tests/behave_tests
+    - name: Run Robot Framework Tests
+      run: robot tests/robot_tests

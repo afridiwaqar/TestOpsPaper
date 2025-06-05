@@ -1,0 +1,8 @@
+python3.8 splinter_cbc.py 
+2024-06-20 20:11:32,671 - chrome: Login successful
+2024-06-20 20:11:32,729 - chrome: Test completed in 0.52 seconds
+2024-06-20 20:11:34,809 - firefox: Login successful
+2024-06-20 20:11:35,527 - firefox: Test completed in 1.25 seconds
+2024-06-20 20:11:53,316 - edge: Login successful
+2024-06-20 20:11:53,373 - edge: Test completed in 0.58 seconds
+

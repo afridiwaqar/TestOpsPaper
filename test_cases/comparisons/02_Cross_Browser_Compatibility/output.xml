@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.8.10 on linux)" generated="2024-06-21T18:48:47.465316" rpa="false" schemaversion="5">
+<suite id="s1" name="Robot Test Phind" source="/home/waqar/FAST/TestOps/test_cases/comparisons/02_Cross_Browser_Compatibility/robot_test_phind.robot">
+<test id="s1-t1" name="Test Login Across Browsers" line="10">
+<for flavor="IN">
+<iter>
+<kw name="Run Keyword And Continue On Failure" owner="BuiltIn">
+<kw name="Test Login">
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-06-21T18:48:47.576608" level="INFO">${DRIVER_PATH} = Chrome_DRIVER_PATH</msg>
+<var>${DRIVER_PATH}</var>
+<arg>${BROWSER}_DRIVER_PATH</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-06-21T18:48:47.576444" elapsed="0.000200"/>
+</kw>
+<kw name="Catenate" owner="BuiltIn">
+<msg time="2024-06-21T18:48:47.576931" level="INFO">${EXECUTABLE_PATH} = Chrome_DRIVER_PATH.replace('_DRIVER_PATH', '').replace('_', '/')</msg>
+<var>${EXECUTABLE_PATH}</var>
+<arg>SEPARATOR=/</arg>
+<arg>${DRIVER_PATH}.replace('_DRIVER_PATH', '').replace('_', '/')</arg>
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<status status="PASS" start="2024-06-21T18:48:47.576761" elapsed="0.000193"/>
+</kw>
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-06-21T18:48:47.577323" level="WARN">exexcutable_path is being deprecated. Please use service to configure the driver's executable_path as per documentation.</msg>
+<msg time="2024-06-21T18:48:47.577411" level="INFO">Opening browser 'Chrome' to base url 'http://127.0.0.1:5000/auth/login'.</msg>
+<msg time="2024-06-21T18:48:47.577635" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg time="2024-06-21T18:48:47.577728" level="FAIL">NoSuchDriverException: Message: Unable to obtain driver for chrome; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors/driver_location
+</msg>
+<arg>${LOGIN_URL}</arg>
+<arg>${BROWSER}</arg>
+<arg>executable_path=${EXECUTABLE_PATH}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="FAIL" start="2024-06-21T18:48:47.577079" elapsed="0.002467">NoSuchDriverException: Message: Unable to obtain driver for chrome; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors/driver_location
+</status>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>id=email</arg>
+<arg>${EMAIL}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-06-21T18:48:47.579674" elapsed="0.000028"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>id=password</arg>
+<arg>${PASSWORD}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-06-21T18:48:47.579797" elapsed="0.000024"/>
+</kw>
+<kw name="Press Key" owner="SeleniumLibrary">
+<arg>id=password</arg>
+<arg>\\13</arg>
+<doc>Simulates user pressing key on element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-06-21T18:48:47.579911" elapsed="0.000023"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>xpath=//h1[@id='title']</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="NOT RUN" start="2024-06-21T18:48:47.580025" elapsed="0.000024"/>
+</kw>
+<kw name="Title Should Be" owner="SeleniumLibrary">
+<arg>Home - Albumy</arg>
+<arg>OR</arg>
+<arg>Dashboard</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<status status="NOT RUN" start="2024-06-21T18:48:47.580142" elapsed="0.000024"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<arg>${BROWSER}: Login successful</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" start="2024-06-21T18:48:47.580267" elapsed="0.000024"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="NOT RUN" start="2024-06-21T18:48:47.580376" elapsed="0.000023"/>
+</kw>
+<arg>${BROWSER}</arg>
+<status status="FAIL" start="2024-06-21T18:48:47.576142" elapsed="0.004345">NoSuchDriverException: Message: Unable to obtain driver for chrome; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors/driver_location
+</status>
+</kw>
+<arg>Test Login</arg>
+<arg>${BROWSER}</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<status status="FAIL" start="2024-06-21T18:48:47.575891" elapsed="0.004661">NoSuchDriverException: Message: Unable to obtain driver for chrome; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors/driver_location
+</status>
+</kw>
+<var name="${BROWSER}">Chrome</var>
+<status status="FAIL" start="2024-06-21T18:48:47.575406" elapsed="0.005200">NoSuchDriverException: Message: Unable to obtain driver for chrome; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors/driver_location
+</status>
+</iter>
+<iter>
+<kw name="Run Keyword And Continue On Failure" owner="BuiltIn">
+<kw name="Test Login">
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-06-21T18:48:47.581384" level="INFO">${DRIVER_PATH} = Firefox_DRIVER_PATH</msg>
+<var>${DRIVER_PATH}</var>
+<arg>${BROWSER}_DRIVER_PATH</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-06-21T18:48:47.581232" elapsed="0.000176"/>
+</kw>
+<kw name="Catenate" owner="BuiltIn">
+<msg time="2024-06-21T18:48:47.581674" level="INFO">${EXECUTABLE_PATH} = Firefox_DRIVER_PATH.replace('_DRIVER_PATH', '').replace('_', '/')</msg>
+<var>${EXECUTABLE_PATH}</var>
+<arg>SEPARATOR=/</arg>
+<arg>${DRIVER_PATH}.replace('_DRIVER_PATH', '').replace('_', '/')</arg>
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<status status="PASS" start="2024-06-21T18:48:47.581508" elapsed="0.000192"/>
+</kw>
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-06-21T18:48:47.582028" level="WARN">exexcutable_path is being deprecated. Please use service to configure the driver's executable_path as per documentation.</msg>
+<msg time="2024-06-21T18:48:47.582105" level="INFO">Opening browser 'Firefox' to base url 'http://127.0.0.1:5000/auth/login'.</msg>
+<msg time="2024-06-21T18:48:47.582717" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg time="2024-06-21T18:48:47.582787" level="FAIL">NoSuchDriverException: Message: Unable to obtain driver for firefox; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors/driver_location
+</msg>
+<arg>${LOGIN_URL}</arg>
+<arg>${BROWSER}</arg>
+<arg>executable_path=${EXECUTABLE_PATH}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="FAIL" start="2024-06-21T18:48:47.581819" elapsed="0.001279">NoSuchDriverException: Message: Unable to obtain driver for firefox; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors/driver_location
+</status>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>id=email</arg>
+<arg>${EMAIL}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-06-21T18:48:47.583231" elapsed="0.000028"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>id=password</arg>
+<arg>${PASSWORD}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-06-21T18:48:47.583356" elapsed="0.000024"/>
+</kw>
+<kw name="Press Key" owner="SeleniumLibrary">
+<arg>id=password</arg>
+<arg>\\13</arg>
+<doc>Simulates user pressing key on element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-06-21T18:48:47.583472" elapsed="0.000023"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>xpath=//h1[@id='title']</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="NOT RUN" start="2024-06-21T18:48:47.583585" elapsed="0.000045"/>
+</kw>
+<kw name="Title Should Be" owner="SeleniumLibrary">
+<arg>Home - Albumy</arg>
+<arg>OR</arg>
+<arg>Dashboard</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<status status="NOT RUN" start="2024-06-21T18:48:47.583724" elapsed="0.000024"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<arg>${BROWSER}: Login successful</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" start="2024-06-21T18:48:47.583840" elapsed="0.000023"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="NOT RUN" start="2024-06-21T18:48:47.583947" elapsed="0.000023"/>
+</kw>
+<arg>${BROWSER}</arg>
+<status status="FAIL" start="2024-06-21T18:48:47.580982" elapsed="0.003062">NoSuchDriverException: Message: Unable to obtain driver for firefox; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors/driver_location
+</status>
+</kw>
+<arg>Test Login</arg>
+<arg>${BROWSER}</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<status status="FAIL" start="2024-06-21T18:48:47.580794" elapsed="0.003316">NoSuchDriverException: Message: Unable to obtain driver for firefox; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors/driver_location
+</status>
+</kw>
+<var name="${BROWSER}">Firefox</var>
+<status status="FAIL" start="2024-06-21T18:48:47.580707" elapsed="0.003456">NoSuchDriverException: Message: Unable to obtain driver for firefox; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors/driver_location
+</status>
+</iter>
+<iter>
+<kw name="Run Keyword And Continue On Failure" owner="BuiltIn">
+<kw name="Test Login">
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-06-21T18:48:47.584916" level="INFO">${DRIVER_PATH} = Edge_DRIVER_PATH</msg>
+<var>${DRIVER_PATH}</var>
+<arg>${BROWSER}_DRIVER_PATH</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-06-21T18:48:47.584770" elapsed="0.000170"/>
+</kw>
+<kw name="Catenate" owner="BuiltIn">
+<msg time="2024-06-21T18:48:47.585201" level="INFO">${EXECUTABLE_PATH} = Edge_DRIVER_PATH.replace('_DRIVER_PATH', '').replace('_', '/')</msg>
+<var>${EXECUTABLE_PATH}</var>
+<arg>SEPARATOR=/</arg>
+<arg>${DRIVER_PATH}.replace('_DRIVER_PATH', '').replace('_', '/')</arg>
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<status status="PASS" start="2024-06-21T18:48:47.585040" elapsed="0.000185"/>
+</kw>
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-06-21T18:48:47.585550" level="WARN">exexcutable_path is being deprecated. Please use service to configure the driver's executable_path as per documentation.</msg>
+<msg time="2024-06-21T18:48:47.585627" level="INFO">Opening browser 'Edge' to base url 'http://127.0.0.1:5000/auth/login'.</msg>
+<msg time="2024-06-21T18:48:47.585881" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg time="2024-06-21T18:48:47.585951" level="FAIL">NoSuchDriverException: Message: Unable to obtain driver for MicrosoftEdge; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors/driver_location
+</msg>
+<arg>${LOGIN_URL}</arg>
+<arg>${BROWSER}</arg>
+<arg>executable_path=${EXECUTABLE_PATH}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="FAIL" start="2024-06-21T18:48:47.585344" elapsed="0.000903">NoSuchDriverException: Message: Unable to obtain driver for MicrosoftEdge; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors/driver_location
+</status>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>id=email</arg>
+<arg>${EMAIL}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-06-21T18:48:47.586373" elapsed="0.000028"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>id=password</arg>
+<arg>${PASSWORD}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-06-21T18:48:47.586497" elapsed="0.000025"/>
+</kw>
+<kw name="Press Key" owner="SeleniumLibrary">
+<arg>id=password</arg>
+<arg>\\13</arg>
+<doc>Simulates user pressing key on element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-06-21T18:48:47.586638" elapsed="0.000026"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>xpath=//h1[@id='title']</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="NOT RUN" start="2024-06-21T18:48:47.586758" elapsed="0.000024"/>
+</kw>
+<kw name="Title Should Be" owner="SeleniumLibrary">
+<arg>Home - Albumy</arg>
+<arg>OR</arg>
+<arg>Dashboard</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<status status="NOT RUN" start="2024-06-21T18:48:47.586870" elapsed="0.000023"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<arg>${BROWSER}: Login successful</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" start="2024-06-21T18:48:47.586987" elapsed="0.000024"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="NOT RUN" start="2024-06-21T18:48:47.587098" elapsed="0.000023"/>
+</kw>
+<arg>${BROWSER}</arg>
+<status status="FAIL" start="2024-06-21T18:48:47.584533" elapsed="0.002678">NoSuchDriverException: Message: Unable to obtain driver for MicrosoftEdge; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors/driver_location
+</status>
+</kw>
+<arg>Test Login</arg>
+<arg>${BROWSER}</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<status status="FAIL" start="2024-06-21T18:48:47.584347" elapsed="0.002935">NoSuchDriverException: Message: Unable to obtain driver for MicrosoftEdge; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors/driver_location
+</status>
+</kw>
+<var name="${BROWSER}">Edge</var>
+<status status="FAIL" start="2024-06-21T18:48:47.584263" elapsed="0.003072">NoSuchDriverException: Message: Unable to obtain driver for MicrosoftEdge; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors/driver_location
+</status>
+</iter>
+<var>${BROWSER}</var>
+<value>@{BROWSERS}</value>
+<status status="FAIL" start="2024-06-21T18:48:47.575167" elapsed="0.012230">Several failures occurred:
+
+1) NoSuchDriverException: Message: Unable to obtain driver for chrome; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors/driver_location
+
+
+2) NoSuchDriverException: Message: Unable to obtain driver for firefox; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors/driver_location
+
+
+3) NoSuchDriverException: Message: Unable to obtain driver for MicrosoftEdge; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors/driver_location
+</status>
+</for>
+<status status="FAIL" start="2024-06-21T18:48:47.574895" elapsed="0.012671">Several failures occurred:
+
+1) NoSuchDriverException: Message: Unable to obtain driver for chrome; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors/driver_location
+
+
+2) NoSuchDriverException: Message: Unable to obtain driver for firefox; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors/driver_location
+
+
+3) NoSuchDriverException: Message: Unable to obtain driver for MicrosoftEdge; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors/driver_location
+</status>
+</test>
+<status status="FAIL" start="2024-06-21T18:48:47.465917" elapsed="0.122022"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Robot Test Phind">Robot Test Phind</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2024-06-21T18:48:47.577323" level="WARN">exexcutable_path is being deprecated. Please use service to configure the driver's executable_path as per documentation.</msg>
+<msg time="2024-06-21T18:48:47.582028" level="WARN">exexcutable_path is being deprecated. Please use service to configure the driver's executable_path as per documentation.</msg>
+<msg time="2024-06-21T18:48:47.585550" level="WARN">exexcutable_path is being deprecated. Please use service to configure the driver's executable_path as per documentation.</msg>
+</errors>
+</robot>

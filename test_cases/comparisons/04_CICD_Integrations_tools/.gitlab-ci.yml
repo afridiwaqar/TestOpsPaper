@@ -1,0 +1,32 @@
+image: python:3.8
+
+stages:
+  - test
+
+before_script:
+  - pip install selenium playwright splinter behave robotframework
+
+test_selenium:
+  stage: test
+  script:
+    - pytest tests/selenium_tests
+
+test_playwright:
+  stage: test
+  script:
+    - pytest tests/playwright_tests
+
+test_splinter:
+  stage: test
+  script:
+    - python tests/splinter_tests.py
+
+test_behave:
+  stage: test
+  script:
+    - behave tests/behave_tests
+
+test_robot:
+  stage: test
+  script:
+    - robot tests/robot_tests

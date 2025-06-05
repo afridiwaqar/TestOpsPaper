@@ -1,0 +1,26 @@
+Feature: Browser Login # features/browser_login.feature:1
+
+  Scenario Outline: User logs into the application from different browsers -- @1.1   # features/browser_login.feature:13
+    Given I open the browser "chrome"                                                # features/steps/browser_login_steps.py:23
+    When I visit the login page                                                      # features/steps/browser_login_steps.py:28
+    And I enter the email "admin@helloflask.com"                                     # features/steps/browser_login_steps.py:32
+    And I enter the password "helloflask"                                            # features/steps/browser_login_steps.py:37
+    And I submit the login form                                                      # features/steps/browser_login_steps.py:42
+    Then I should see the title containing "Home - Albumy"                           # features/steps/browser_login_steps.py:48
+
+  Scenario Outline: User logs into the application from different browsers -- @1.2   # features/browser_login.feature:14
+    Given I open the browser "firefox"                                               # features/steps/browser_login_steps.py:23
+    When I visit the login page                                                      # features/steps/browser_login_steps.py:28
+    And I enter the email "admin@helloflask.com"                                     # features/steps/browser_login_steps.py:32
+    And I enter the password "helloflask"                                            # features/steps/browser_login_steps.py:37
+    And I submit the login form                                                      # features/steps/browser_login_steps.py:42
+    Then I should see the title containing "Home - Albumy"                           # features/steps/browser_login_steps.py:48
+
+  Scenario Outline: User logs into the application from different browsers -- @1.3   # features/browser_login.feature:15
+    Given I open the browser "edge"                                                  # features/steps/browser_login_steps.py:23
+    When I visit the login page                                                      # features/steps/browser_login_steps.py:28
+    And I enter the email "admin@helloflask.com"                                     # features/steps/browser_login_steps.py:32
+    And I enter the password "helloflask"                                            # features/steps/browser_login_steps.py:37
+    And I submit the login form                                                      # features/steps/browser_login_steps.py:42
+    Then I should see the title containing "Home - Albumy"                           # features/steps/browser_login_steps.py:48
+

@@ -1,0 +1,7 @@
+Browser,Status,Duration
+chromium,Success,2.50 seconds
+firefox,Success,3.40 seconds
+webkit,Success,2.78 seconds
+chrome,Success,2.32 seconds
+firefox,Success,3.27 seconds
+edge,Success,2.33 seconds

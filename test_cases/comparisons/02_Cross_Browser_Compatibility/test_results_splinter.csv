@@ -1,0 +1,12 @@
+Browser,Status,Duration
+chrome,Failed,0.28 seconds
+firefox,Failed,1.28 seconds
+chrome,Failed,2.16 seconds
+firefox,Failed,3.58 seconds
+chrome,Failed,4.17 seconds
+firefox,Failed,4.68 seconds
+chrome,Success,0.50 seconds
+firefox,Success,1.35 seconds
+chrome,Success,0.52 seconds
+firefox,Success,1.25 seconds
+edge,Success,0.58 seconds

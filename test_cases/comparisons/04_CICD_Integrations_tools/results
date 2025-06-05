@@ -1,0 +1,7 @@
+
+Tool	Jenkins	CircleCI	GitHub Actions	GitLab CI	Travis CI	Azure DevOps
+Selenium	Yes	Yes	Yes	Yes	Yes	Yes
+Playwright	Yes	Yes	Yes	Yes	Yes	Yes
+Splinter	Yes	Yes	Yes	Yes	Yes	Yes
+Behave	Yes	Yes	Yes	Yes	Yes	Yes
+Robot Framework	Yes	Yes	Yes	Yes	Yes	Yes

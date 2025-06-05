@@ -1,0 +1,8 @@
+python3.8 playwrite_cbc.py 
+2024-06-20 19:49:44,973 - chrome: Login successful
+2024-06-20 19:49:44,989 - chrome: Test completed in 2.32 seconds
+2024-06-20 19:49:48,277 - firefox: Login successful
+2024-06-20 19:49:48,649 - firefox: Test completed in 3.27 seconds
+2024-06-20 19:49:51,014 - edge: Login successful
+2024-06-20 19:49:51,034 - edge: Test completed in 2.33 seconds
+

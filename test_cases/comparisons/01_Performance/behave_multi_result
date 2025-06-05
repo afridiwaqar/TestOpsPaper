@@ -1,0 +1,16 @@
+behave 
+Feature: Upload files to the server # upload_files.feature:1
+
+  Scenario: Login and upload files                 # upload_files.feature:3
+    Given I open the browser                       # steps/upload_steps.py:10 9.560s
+    And I navigate to the login page               # steps/upload_steps.py:16 0.776s
+    When I fill in the login form                  # steps/upload_steps.py:20 0.408s
+    Then I should be logged in                     # steps/upload_steps.py:26 0.072s
+    When I upload files                            # steps/upload_steps.py:30 120.903s
+    Then the files should be uploaded successfully # steps/upload_steps.py:45 0.077s
+
+1 feature passed, 0 failed, 0 skipped
+1 scenario passed, 0 failed, 0 skipped
+6 steps passed, 0 failed, 0 skipped, 0 undefined
+Took 2m11.795s
+

@@ -1,0 +1,19 @@
+Feature: Browser Login # features/browser_login.feature:1
+
+  Scenario: User logs into the application and posts a comment                               # features/browser_login.feature:3
+    Given I open the browser "chrome"                                                        # features/steps/browser_login_steps.py:5 12.239s
+    When I visit the login page                                                              # features/steps/browser_login_steps.py:10 0.087s
+    And I fill in the login form with email "admin@helloflask.com" and password "helloflask" # features/steps/browser_login_steps.py:14 0.107s
+    And I submit the login form                                                              # features/steps/browser_login_steps.py:19 0.235s
+    And I navigate to the photo page with id "34"                                            # features/steps/browser_login_steps.py:27 0.061s
+    Then I should see the initial number of comments                                         # features/steps/browser_login_steps.py:32 0.015s
+    When I enter a new comment "This is a test comment."                                     # features/steps/browser_login_steps.py:38 0.041s
+    And I submit the comment form                                                            # features/steps/browser_login_steps.py:42 1.125s
+    Then I should see the updated number of comments                                         # features/steps/browser_login_steps.py:51 0.029s
+    And I close the browser                                                                  # features/steps/browser_login_steps.py:59 0.057s
+
+1 feature passed, 0 failed, 0 skipped
+1 scenario passed, 0 failed, 0 skipped
+10 steps passed, 0 failed, 0 skipped, 0 undefined
+Took 0m13.995s
+

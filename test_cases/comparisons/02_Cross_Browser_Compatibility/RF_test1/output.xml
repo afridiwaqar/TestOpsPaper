@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.8.10 on linux)" generated="2024-06-21T20:16:53.604303" rpa="false" schemaversion="5">
+<suite id="s1" name="Cbc Test" source="/home/waqar/FAST/TestOps/test_cases/comparisons/02_Cross_Browser_Compatibility/RF_test1/cbc_test.robot">
+<test id="s1-t1" name="Open Flask Application Login Page and Login" line="11">
+<for flavor="IN">
+<iter>
+<kw name="Get Time" owner="BuiltIn">
+<msg time="2024-06-21T20:16:53.694633" level="INFO">${start_time} = 2024-06-21 20:16:53</msg>
+<var>${start_time}</var>
+<doc>Returns the given time in the requested format.</doc>
+<status status="PASS" start="2024-06-21T20:16:53.694448" elapsed="0.000222"/>
+</kw>
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-06-21T20:16:53.694999" level="INFO">Opening browser 'Edge' to base url 'http://127.0.0.1:5000/auth/login'.</msg>
+<arg>${URL}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-06-21T20:16:53.694805" elapsed="1.265532"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-06-21T20:16:54.960682" elapsed="0.018198"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-06-21T20:16:54.979506" level="INFO">Typing text 'admin@helloflask.com' into text field 'id=email'.</msg>
+<arg>id=email</arg>
+<arg>${USERNAME}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-21T20:16:54.979073" elapsed="0.070926"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2024-06-21T20:16:55.050661" level="INFO">Typing password into text field 'id=password'.</msg>
+<msg time="2024-06-21T20:16:55.068760" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>id=password</arg>
+<arg>${PASSWORD}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-21T20:16:55.050249" elapsed="0.045150"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-06-21T20:16:55.095779" level="INFO">Clicking button 'id=submit'.</msg>
+<arg>id=submit</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-21T20:16:55.095594" elapsed="0.245198"/>
+</kw>
+<kw name="Get Time" owner="BuiltIn">
+<msg time="2024-06-21T20:16:55.341285" level="INFO">${end_time} = 2024-06-21 20:16:55</msg>
+<var>${end_time}</var>
+<doc>Returns the given time in the requested format.</doc>
+<status status="PASS" start="2024-06-21T20:16:55.341016" elapsed="0.000299"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-06-21T20:16:55.342964" level="INFO">${elapsed_time} = 2.0</msg>
+<var>${elapsed_time}</var>
+<arg>(datetime.datetime.strptime('${end_time}', '%Y-%m-%d %H:%M:%S') - datetime.datetime.strptime('${start_time}', '%Y-%m-%d %H:%M:%S')).total_seconds()</arg>
+<arg>modules=datetime</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-06-21T20:16:55.341447" elapsed="0.001567"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-06-21T20:16:55.343545" level="INFO">Browser Edge: 2.0 seconds</msg>
+<arg>Browser ${browser}: ${elapsed_time} seconds</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-06-21T20:16:55.343255" elapsed="0.000354"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-06-21T20:16:55.343778" elapsed="0.057660"/>
+</kw>
+<var name="${browser}">Edge</var>
+<status status="PASS" start="2024-06-21T20:16:53.693917" elapsed="1.707614"/>
+</iter>
+<iter>
+<kw name="Get Time" owner="BuiltIn">
+<msg time="2024-06-21T20:16:55.402090" level="INFO">${start_time} = 2024-06-21 20:16:55</msg>
+<var>${start_time}</var>
+<doc>Returns the given time in the requested format.</doc>
+<status status="PASS" start="2024-06-21T20:16:55.401863" elapsed="0.000268"/>
+</kw>
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-06-21T20:16:55.402621" level="INFO">Opening browser 'Chrome' to base url 'http://127.0.0.1:5000/auth/login'.</msg>
+<msg time="2024-06-21T20:16:55.431040" level="WARN">The chromedriver version (125.0.6422.60) detected in PATH at /usr/local/bin/chromedriver might not be compatible with the detected chrome version (126.0.6478.114); currently, chromedriver 126.0.6478.63 is recommended for chrome 126.*, so it is advised to delete the driver in PATH and retry</msg>
+<arg>${URL}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-06-21T20:16:55.402326" elapsed="0.939917"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-06-21T20:16:56.342658" elapsed="0.020841"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-06-21T20:16:56.364029" level="INFO">Typing text 'admin@helloflask.com' into text field 'id=email'.</msg>
+<arg>id=email</arg>
+<arg>${USERNAME}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-21T20:16:56.363702" elapsed="0.059889"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2024-06-21T20:16:56.424079" level="INFO">Typing password into text field 'id=password'.</msg>
+<msg time="2024-06-21T20:16:56.442088" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>id=password</arg>
+<arg>${PASSWORD}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-21T20:16:56.423805" elapsed="0.039797"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-06-21T20:16:56.463975" level="INFO">Clicking button 'id=submit'.</msg>
+<arg>id=submit</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-21T20:16:56.463792" elapsed="0.322302"/>
+</kw>
+<kw name="Get Time" owner="BuiltIn">
+<msg time="2024-06-21T20:16:56.786652" level="INFO">${end_time} = 2024-06-21 20:16:56</msg>
+<var>${end_time}</var>
+<doc>Returns the given time in the requested format.</doc>
+<status status="PASS" start="2024-06-21T20:16:56.786360" elapsed="0.000333"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-06-21T20:16:56.787270" level="INFO">${elapsed_time} = 1.0</msg>
+<var>${elapsed_time}</var>
+<arg>(datetime.datetime.strptime('${end_time}', '%Y-%m-%d %H:%M:%S') - datetime.datetime.strptime('${start_time}', '%Y-%m-%d %H:%M:%S')).total_seconds()</arg>
+<arg>modules=datetime</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-06-21T20:16:56.786865" elapsed="0.000433"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-06-21T20:16:56.787610" level="INFO">Browser Chrome: 1.0 seconds</msg>
+<arg>Browser ${browser}: ${elapsed_time} seconds</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-06-21T20:16:56.787430" elapsed="0.000227"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-06-21T20:16:56.787784" elapsed="0.158024"/>
+</kw>
+<var name="${browser}">Chrome</var>
+<status status="PASS" start="2024-06-21T20:16:55.401734" elapsed="1.544160"/>
+</iter>
+<iter>
+<kw name="Get Time" owner="BuiltIn">
+<msg time="2024-06-21T20:16:56.946402" level="INFO">${start_time} = 2024-06-21 20:16:56</msg>
+<var>${start_time}</var>
+<doc>Returns the given time in the requested format.</doc>
+<status status="PASS" start="2024-06-21T20:16:56.946223" elapsed="0.000206"/>
+</kw>
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-06-21T20:16:56.946762" level="INFO">Opening browser 'Firefox' to base url 'http://127.0.0.1:5000/auth/login'.</msg>
+<arg>${URL}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-06-21T20:16:56.946562" elapsed="2.714069"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-06-21T20:16:59.661049" elapsed="0.001840"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-06-21T20:16:59.663402" level="INFO">Typing text 'admin@helloflask.com' into text field 'id=email'.</msg>
+<arg>id=email</arg>
+<arg>${USERNAME}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-21T20:16:59.663058" elapsed="0.067483"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2024-06-21T20:16:59.730977" level="INFO">Typing password into text field 'id=password'.</msg>
+<msg time="2024-06-21T20:16:59.736681" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>id=password</arg>
+<arg>${PASSWORD}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-21T20:16:59.730737" elapsed="0.012937"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-06-21T20:16:59.744058" level="INFO">Clicking button 'id=submit'.</msg>
+<arg>id=submit</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-21T20:16:59.743875" elapsed="0.457472"/>
+</kw>
+<kw name="Get Time" owner="BuiltIn">
+<msg time="2024-06-21T20:17:00.201771" level="INFO">${end_time} = 2024-06-21 20:17:00</msg>
+<var>${end_time}</var>
+<doc>Returns the given time in the requested format.</doc>
+<status status="PASS" start="2024-06-21T20:17:00.201552" elapsed="0.000245"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-06-21T20:17:00.202267" level="INFO">${elapsed_time} = 4.0</msg>
+<var>${elapsed_time}</var>
+<arg>(datetime.datetime.strptime('${end_time}', '%Y-%m-%d %H:%M:%S') - datetime.datetime.strptime('${start_time}', '%Y-%m-%d %H:%M:%S')).total_seconds()</arg>
+<arg>modules=datetime</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-06-21T20:17:00.201913" elapsed="0.000381"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-06-21T20:17:00.202564" level="INFO">Browser Firefox: 4.0 seconds</msg>
+<arg>Browser ${browser}: ${elapsed_time} seconds</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-06-21T20:17:00.202409" elapsed="0.000200"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-06-21T20:17:00.202712" elapsed="2.514674"/>
+</kw>
+<var name="${browser}">Firefox</var>
+<status status="PASS" start="2024-06-21T20:16:56.946092" elapsed="5.771388"/>
+</iter>
+<var>${browser}</var>
+<value>@{BROWSERS}</value>
+<status status="PASS" start="2024-06-21T20:16:53.693695" elapsed="9.023847"/>
+</for>
+<status status="PASS" start="2024-06-21T20:16:53.693408" elapsed="9.024362"/>
+</test>
+<status status="PASS" start="2024-06-21T20:16:53.605135" elapsed="9.113077"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Cbc Test">Cbc Test</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2024-06-21T20:16:55.431040" level="WARN">The chromedriver version (125.0.6422.60) detected in PATH at /usr/local/bin/chromedriver might not be compatible with the detected chrome version (126.0.6478.114); currently, chromedriver 126.0.6478.63 is recommended for chrome 126.*, so it is advised to delete the driver in PATH and retry</msg>
+</errors>
+</robot>

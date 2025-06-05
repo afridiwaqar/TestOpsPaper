@@ -1,0 +1,20 @@
+waqar@waqar-desktop:~/FAST/TestOps/test_cases/comparisons/02_Cross_Browser_Compatibility$ python3.8 selenium_cbc.py 
+2024-06-20 19:35:21,777 - INFO - ====== WebDriver manager ======
+2024-06-20 19:35:21,822 - INFO - Get LATEST chromedriver version for google-chrome
+2024-06-20 19:35:21,984 - INFO - Get LATEST chromedriver version for google-chrome
+2024-06-20 19:35:22,156 - INFO - Driver [/home/waqar/.wdm/drivers/chromedriver/linux64/125.0.6422.141/chromedriver-linux64/chromedriver] found in cache
+2024-06-20 19:35:24,885 - INFO - chrome: Login successful
+2024-06-20 19:35:24,945 - INFO - chrome: Test completed in 2.48 seconds
+2024-06-20 19:35:24,945 - INFO - ====== WebDriver manager ======
+2024-06-20 19:35:24,993 - INFO - Get LATEST geckodriver version for 126.0 firefox
+2024-06-20 19:35:25,651 - INFO - Get LATEST geckodriver version for 126.0 firefox
+2024-06-20 19:35:25,933 - INFO - Driver [/home/waqar/.wdm/drivers/geckodriver/linux64/v0.34.0/geckodriver] found in cache
+2024-06-20 19:35:29,755 - INFO - firefox: Login successful
+2024-06-20 19:35:32,275 - INFO - firefox: Test completed in 4.79 seconds
+2024-06-20 19:35:32,275 - INFO - ====== WebDriver manager ======
+2024-06-20 19:35:32,323 - INFO - Get LATEST edgedriver version for Edge 125.0.2535
+2024-06-20 19:35:32,710 - INFO - Get LATEST edgedriver version for Edge 125.0.2535
+2024-06-20 19:35:32,942 - INFO - Driver [/home/waqar/.wdm/drivers/edgedriver/linux64/125.0.2535.92/msedgedriver] found in cache
+2024-06-20 19:35:35,718 - INFO - edge: Login successful
+2024-06-20 19:35:35,777 - INFO - edge: Test completed in 2.54 seconds
+

@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.8.10 on linux)" generated="2024-06-26T14:25:51.397791" rpa="false" schemaversion="5">
+<suite id="s1" name="Browser Login" source="/home/waqar/FAST/TestOps/test_cases/comparisons/03_Handling_Dynamic_Content/robot_hdc/tests/browser_login.robot">
+<test id="s1-t1" name="Login With Chrome" line="6">
+<kw name="Get Time In Milliseconds" owner="keywords">
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-06-26T14:25:51.493757" level="INFO">${time_in_ms} = 1719393951493.6946</msg>
+<var>${time_in_ms}</var>
+<arg>time.time() * 1000</arg>
+<arg>modules=time</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-06-26T14:25:51.493518" elapsed="0.000279"/>
+</kw>
+<return>
+<value>${time_in_ms}</value>
+<status status="PASS" start="2024-06-26T14:25:51.493873" elapsed="0.000049"/>
+</return>
+<msg time="2024-06-26T14:25:51.494057" level="INFO">${start_time} = 1719393951493.6946</msg>
+<var>${start_time}</var>
+<status status="PASS" start="2024-06-26T14:25:51.492889" elapsed="0.001193"/>
+</kw>
+<kw name="Open Browser And Login" owner="keywords">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-06-26T14:25:51.494730" level="INFO">Opening browser 'chrome' to base url 'http://127.0.0.1:5000/auth/login'.</msg>
+<arg>${LOGIN_URL}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-06-26T14:25:51.494491" elapsed="0.382364"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-06-26T14:25:51.877284" elapsed="0.013822"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-06-26T14:25:51.892008" level="INFO">Typing text 'admin@helloflask.com' into text field 'name=email'.</msg>
+<arg>name=email</arg>
+<arg>${EMAIL}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-26T14:25:51.891348" elapsed="0.075364"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-06-26T14:25:51.967169" level="INFO">Typing text 'helloflask' into text field 'name=password'.</msg>
+<arg>name=password</arg>
+<arg>${PASSWORD}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-26T14:25:51.966917" elapsed="0.040126"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-06-26T14:25:52.007446" level="INFO">Clicking button 'name=submit'.</msg>
+<arg>name=submit</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-26T14:25:52.007248" elapsed="0.239399"/>
+</kw>
+<arg>chrome</arg>
+<status status="PASS" start="2024-06-26T14:25:51.494255" elapsed="0.752539"/>
+</kw>
+<kw name="Navigate To Photo Page" owner="keywords">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2024-06-26T14:25:52.247539" level="INFO">Opening url 'http://127.0.0.1:5000/photo/34'</msg>
+<arg>${PHOTO_URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2024-06-26T14:25:52.247378" elapsed="0.056904"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>css=div.comments</arg>
+<arg>20s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-06-26T14:25:52.304489" elapsed="0.013458"/>
+</kw>
+<status status="PASS" start="2024-06-26T14:25:52.247089" elapsed="0.071012"/>
+</kw>
+<kw name="Get Number Of Comments" owner="keywords">
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-06-26T14:25:52.333858" level="INFO">${comments_text} = 11 Comments latest
+Disable comment</msg>
+<var>${comments_text}</var>
+<arg>css=div.comments h3</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-26T14:25:52.318646" elapsed="0.015258"/>
+</kw>
+<return>
+<value>${comments_text}</value>
+<status status="PASS" start="2024-06-26T14:25:52.334009" elapsed="0.000062"/>
+</return>
+<msg time="2024-06-26T14:25:52.334231" level="INFO">${initial_comments} = 11 Comments latest
+Disable comment</msg>
+<var>${initial_comments}</var>
+<status status="PASS" start="2024-06-26T14:25:52.318359" elapsed="0.015898"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-06-26T14:25:52.334622" level="INFO">Initial number of comments: 11 Comments latest
+Disable comment</msg>
+<arg>Initial number of comments: ${initial_comments}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-06-26T14:25:52.334446" elapsed="0.000221"/>
+</kw>
+<kw name="Enter And Submit Comment" owner="keywords">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-06-26T14:25:52.335285" level="INFO">Typing text 'This is a test comment.' into text field 'name=body'.</msg>
+<arg>name=body</arg>
+<arg>${COMMENT}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-26T14:25:52.335088" elapsed="0.037976"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-06-26T14:25:52.373496" level="INFO">Clicking button 'name=submit'.</msg>
+<arg>name=submit</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-26T14:25:52.373293" elapsed="0.080934"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-06-26T14:25:53.454878" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-06-26T14:25:52.454429" elapsed="1.000796"/>
+</kw>
+<status status="PASS" start="2024-06-26T14:25:52.334854" elapsed="1.120732"/>
+</kw>
+<kw name="Get Number Of Comments" owner="keywords">
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-06-26T14:25:53.470027" level="INFO">${comments_text} = 12 Comments latest
+Disable comment</msg>
+<var>${comments_text}</var>
+<arg>css=div.comments h3</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-26T14:25:53.457550" elapsed="0.012516"/>
+</kw>
+<return>
+<value>${comments_text}</value>
+<status status="PASS" start="2024-06-26T14:25:53.470149" elapsed="0.000041"/>
+</return>
+<msg time="2024-06-26T14:25:53.470325" level="INFO">${updated_comments} = 12 Comments latest
+Disable comment</msg>
+<var>${updated_comments}</var>
+<status status="PASS" start="2024-06-26T14:25:53.456508" elapsed="0.013842"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-06-26T14:25:53.470673" level="INFO">Updated number of comments: 12 Comments latest
+Disable comment</msg>
+<arg>Updated number of comments: ${updated_comments}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-06-26T14:25:53.470525" elapsed="0.000191"/>
+</kw>
+<kw name="Log Execution Time" owner="keywords">
+<kw name="Get Time In Milliseconds" owner="keywords">
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-06-26T14:25:53.471717" level="INFO">${time_in_ms} = 1719393953471.6672</msg>
+<var>${time_in_ms}</var>
+<arg>time.time() * 1000</arg>
+<arg>modules=time</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-06-26T14:25:53.471505" elapsed="0.000238"/>
+</kw>
+<return>
+<value>${time_in_ms}</value>
+<status status="PASS" start="2024-06-26T14:25:53.471800" elapsed="0.000029"/>
+</return>
+<msg time="2024-06-26T14:25:53.471951" level="INFO">${end_time} = 1719393953471.6672</msg>
+<var>${end_time}</var>
+<status status="PASS" start="2024-06-26T14:25:53.471296" elapsed="0.000679"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-06-26T14:25:53.472287" level="INFO">${execution_time} = 1.97797265625</msg>
+<var>${execution_time}</var>
+<arg>(${end_time} - ${start_time}) / 1000</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-06-26T14:25:53.472080" elapsed="0.000231"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-06-26T14:25:53.472544" level="INFO">Execution Time: 1.97797265625 seconds</msg>
+<arg>Execution Time: ${execution_time} seconds</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-06-26T14:25:53.472420" elapsed="0.000199"/>
+</kw>
+<arg>${start_time}</arg>
+<status status="PASS" start="2024-06-26T14:25:53.470898" elapsed="0.001783"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-06-26T14:25:53.472831" elapsed="0.057925"/>
+</kw>
+<status status="PASS" start="2024-06-26T14:25:51.492431" elapsed="2.038558"/>
+</test>
+<status status="PASS" start="2024-06-26T14:25:51.398529" elapsed="2.132839"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Browser Login">Browser Login</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
